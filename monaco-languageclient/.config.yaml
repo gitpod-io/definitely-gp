@@ -1,0 +1,6 @@
+tasks:
+  - command: "npm config set unsafe-perm true"
+  - command: "npm i"
+  - command: "cd example"
+  - command: "npm i"
+  - command: "npm run start"
