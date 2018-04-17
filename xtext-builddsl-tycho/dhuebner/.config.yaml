@@ -2,5 +2,5 @@ ports:
   - port: 3000
     protocol: "http"
 tasks:
-  - command: "apt-get update && apt-get install -y mvn"
+  - command: "apt-get update && apt-get install -y maven"
   - command: "mvn -version"
