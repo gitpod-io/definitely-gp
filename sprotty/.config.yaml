@@ -3,7 +3,7 @@ ports:
     protocol: "http"
 tasks:
   - command: "cd client"
-  - command "yarn"
+  - command: "yarn"
   - command: "cd ../server"
   - command: "./gradlew jettyRun"
 
