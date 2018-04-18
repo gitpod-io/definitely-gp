@@ -1,0 +1,10 @@
+ports:
+  - port: 8080
+    protocol: "http"
+tasks:
+  - command: "cd client"
+  - command "yarn"
+  - command: "cd ../server"
+  - command: "./gradlew jettyRun"
+
+
