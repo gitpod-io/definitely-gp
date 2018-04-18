@@ -2,6 +2,6 @@ ports:
   - port: 8080
     protocol: "http"
 tasks:
-  - command: "cd client && yarn && cd ../server && ./gradlew jettyRun"
+  - command: "cd client && yarn && yarn examples:build && cd ../server && ./gradlew jettyRun"
 
 
