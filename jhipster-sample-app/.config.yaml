@@ -1,5 +1,9 @@
 ports:
   - port: 8080
     protocol: "http"
+  - port: 9000
+    protocol: "http"
+  - port: 3001
+    protocol: "http"
 tasks:
   - command: "yarn install && ./mvnw"
