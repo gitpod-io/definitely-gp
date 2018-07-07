@@ -1,0 +1,5 @@
+ports:
+  - port: 8833
+    protocol: "http"
+tasks:
+  - command: "yarn && yarn dev"
