@@ -1,0 +1,7 @@
+ports:
+  - port: 8080
+    protocol: "http"
+tasks:
+  - command: >
+      cd initial &&
+      ./gradlew clean build bootRun
