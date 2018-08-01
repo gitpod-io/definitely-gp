@@ -1,0 +1,11 @@
+ports:
+  - port: 8080
+    protocol: "http"
+checkoutLocation: "src/github.com/gitpod-io/go-gin-app"
+workspaceLocation: "."
+tasks:
+  - command: >
+      cd /workspace/src/github.com/gitpod-io/go-gin-app &&
+      go get -v ./... &&
+      go build -o app &&
+      ./app 
