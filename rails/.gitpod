@@ -1,0 +1,9 @@
+ports:
+  - port: 3000
+    protocol: "http"
+tasks:
+  - command: >
+        gem install rails &&
+        rails new myapp &&
+        cd myapp &&
+        rails server
