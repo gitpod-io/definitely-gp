@@ -1,0 +1,10 @@
+ports:
+  - port: 8080
+    protocol: "http"
+tasks:
+  - command: >
+        pip install -r requirements.txt &&
+        cp .env.example .env &&
+        sed -i 's/ALLOWED_HOSTS.*/ALLOWED_HOSTS=\*/' .env &&
+        python manage.py migrate &&
+        python manage.py runserver 0.0.0.0:8080
