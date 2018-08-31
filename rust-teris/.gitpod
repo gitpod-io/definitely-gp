@@ -1,0 +1,4 @@
+tasks:
+  - command: >
+      cargo build &&
+      cargo run
