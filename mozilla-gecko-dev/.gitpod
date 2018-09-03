@@ -2,9 +2,3 @@ image: janitortechnology/firefox
 ports:
   - port: 8088
     protocol: "http"
-  - port: 8089
-    protocol: "http"
-  - port: 8090
-    protocol: "http"
-checkoutLocation: "/home/user/firefox"
-workspaceLocation: "/home/user/firefox"
