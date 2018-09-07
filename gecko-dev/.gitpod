@@ -1,4 +1,0 @@
-image: janitortechnology/firefox
-ports:
-  - port: 8088
-    protocol: "http"
