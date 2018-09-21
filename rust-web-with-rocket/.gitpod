@@ -11,4 +11,4 @@ tasks:
       cargo run
 ports:
   - port: 8000
-protocol: "http"
+    protocol: "http"
