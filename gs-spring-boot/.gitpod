@@ -3,5 +3,5 @@ ports:
     protocol: "http"
 tasks:
   - command: >
-      cd initial &&
+      cd complete &&
       ./gradlew clean build bootRun
