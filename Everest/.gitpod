@@ -1,0 +1,7 @@
+image:
+  file: Dockerfile
+tasks:
+  - command: "mvn package && mvn exec:java"
+ports:
+  - port: 6080
+    protocol: "http"
