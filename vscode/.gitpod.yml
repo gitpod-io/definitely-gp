@@ -1,0 +1,6 @@
+image:
+  file: Dockerfile
+ports:
+  - port: 6080
+tasks:
+  - command: "yarn && ./scripts/code.sh"

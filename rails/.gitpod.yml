@@ -1,6 +1,5 @@
 ports:
   - port: 3000
-    protocol: "http"
 tasks:
   - command: >
         gem install rails &&

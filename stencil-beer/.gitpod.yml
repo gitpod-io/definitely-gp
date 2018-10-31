@@ -1,6 +1,6 @@
 ports:
   - port: 3333
-    protocol: "http"
+
 tasks:
   - command: >
         npm install &&
