@@ -4,6 +4,5 @@ image:
   file: Dockerfile
 ports:
   - port: 6080
-    protocol: "http"
 tasks:
   - command: "go get -v ./... && cd examples && DISPLAY=:0 go run controlgallery.go"

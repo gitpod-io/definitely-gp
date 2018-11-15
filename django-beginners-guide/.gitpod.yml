@@ -1,6 +1,5 @@
 ports:
   - port: 8080
-    protocol: "http"
 tasks:
   - command: >
         pip install -r requirements.txt &&

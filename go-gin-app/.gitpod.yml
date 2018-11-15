@@ -1,6 +1,5 @@
 ports:
   - port: 8080
-    protocol: "http"
 checkoutLocation: "src/github.com/demo-apps/go-gin-app"
 workspaceLocation: "."
 tasks:
@@ -8,4 +7,4 @@ tasks:
       cd /workspace/src/github.com/demo-apps/go-gin-app &&
       go get -v ./... &&
       go build -o app &&
-      ./app 
+      ./app

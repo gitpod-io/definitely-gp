@@ -1,0 +1,4 @@
+ports:
+  - port: 8080
+tasks:
+  - command: "npm install http-server -g && http-server -p 8080"
