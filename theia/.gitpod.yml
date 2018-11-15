@@ -3,3 +3,4 @@ ports:
 tasks:
   - command: >
       yarn
+    on: init
