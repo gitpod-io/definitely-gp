@@ -1,0 +1,7 @@
+ports:
+- port: 8080
+tasks:
+- command: npm install && npm run dev --hostname 0.0.0.0
+  on: init
+- command: npm run dev --hostname 0.0.0.0
+  on: restart
