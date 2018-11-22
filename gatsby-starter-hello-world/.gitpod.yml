@@ -1,0 +1,7 @@
+ports:
+- port: 8000
+tasks:
+- on: init
+  command: npm install && npx gatsby develop --host 0.0.0.0
+- on: restart
+  command: npx gatsby develop --host 0.0.0.0
