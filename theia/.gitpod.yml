@@ -1,6 +1,4 @@
 ports:
   - port: 3000
 tasks:
-  - command: >
-      yarn
-    on: init
+  - init: yarn
