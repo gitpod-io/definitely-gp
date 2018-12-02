@@ -1,0 +1,7 @@
+image:
+  file: Dockerfile
+ports:
+    - port: 1313
+      onOpen: open-preview
+tasks:
+  - command: hugo server --bind 0.0.0.0 --liveReloadPort 443
