@@ -1,0 +1,7 @@
+image:
+  file: Dockerfile
+ports:
+- port: 3000
+  onOpen: open-preview
+tasks:
+- command: mdbook serve --interface 0.0.0.0
