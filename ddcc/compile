@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# check if curl is present
+# if not, download curl
+if [ ! -n "$(command -v curl)" ]; then
+  sudo apt -y install curl
+fi
+
+if [ ! -n "$(command -v unzip)" ]; then
+  sudo apt -y install unzip
+fi
+
+# Pipe JSON output to grep then pipe back to curl for GET
+curl --request POST https://teamsalvato.itch.io/ddlc/file/594901 | grep -Po '"url": *\K"[^"]*"' |  \
+    # Normalize ths because JSON output had backticks
+    sed "s@\\\\@@g" | \
+    xargs wget -O ddlc.zip
+
+# Unzip file and put it to home folder
+mkdir /home/gitpod/ddlc
+cp -vRf /tmp/ddlc.zip /home/ddlc.backup.zip
+unzip -d /home/gitpod/ddlc ddlc.zip
+mv /home/gitpod/ddlc/DDLC.app/Resources/* /home/gitpod/ddlc
+
+chown -R gitpod:gitpod /home/gitpod/ddlc
+chown -R gitpod:gitpod /home/gitpod/ddlc.backup.zip
+
+# Clean up
+rm -rf /home/gitpod/ddlc/DDLC.app
+rm -rf /tmp/ddlc.zip
+
