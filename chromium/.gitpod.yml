@@ -1,0 +1,6 @@
+image:
+  file: Dockerfile
+tasks:
+  - init: >
+      gclient runhooks &&
+      gn gen out/Default --args="enable_nacl=false is_component_build=true use_jumbo_build=true symbol_level=1"
