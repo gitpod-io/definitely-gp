@@ -1,4 +1,4 @@
 tasks:
 - init: go get -v ./...
-checkoutLocation: /workspace/src/github.com/alash3al/sqler
-workspaceLocation: /workspace/src/github.com/alash3al/sqler
+checkoutLocation: "src/github.com/alash3al/sqler"
+workspaceLocation: "src/github.com/alash3al/sqler"
