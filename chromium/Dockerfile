@@ -5,6 +5,7 @@ USER root
 # Install Chromium build dependencies
 RUN apt update \
  && wget -qO /tmp/install-build-deps.sh https://chromium.googlesource.com/chromium/src/+/master/build/install-build-deps.sh?format=TEXT \
+ && chmod +x /tmp/install-build-deps.sh \
  && echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections \
  && /tmp/install-build-deps.sh --no-prompt --no-arm --no-chromeos-fonts --no-nacl \
  && wget -qO /tmp/libgcrypt11.deb https://launchpad.net/ubuntu/+archive/primary/+files/libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb \
