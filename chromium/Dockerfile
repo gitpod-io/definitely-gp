@@ -5,6 +5,7 @@ USER root
 # Install Chromium build dependencies
 RUN apt update \
  && curl -L https://chromium.googlesource.com/chromium/src/+/master/build/install-build-deps.sh?format=TEXT | base64 --decode > /tmp/install-build-deps.sh \
+ && sed -ri 's/\(trusty\|xenial\|artful\|bionic\)/(trusty|xenial|artful|bionic|cosmic)/' /tmp/install-build-deps.sh \
  && chmod +x /tmp/install-build-deps.sh \
  && echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections \
  && /tmp/install-build-deps.sh --no-prompt --no-arm --no-chromeos-fonts --no-nacl \
@@ -22,7 +23,7 @@ RUN git clone https://github.com/ninja-build/ninja /tmp/ninja \
  && mv misc/zsh-completion /home/gitpod/.ninja-zsh-completion \
  && echo "\n# Ninja completion helpers." >> /home/gitpod/.bashrc \
  && echo ". /home/gitpod/.ninja-bash-completion" >> /home/gitpod/.bashrc \
-&& rm -rf /tmp/ninja
+ && rm -rf /tmp/ninja
 
 USER gitpod
 
