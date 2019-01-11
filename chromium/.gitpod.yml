@@ -1,5 +1,6 @@
 image:
   file: Dockerfile
+checkoutLocation: chromium/src/
 tasks:
   - init: >
       gclient runhooks &&
