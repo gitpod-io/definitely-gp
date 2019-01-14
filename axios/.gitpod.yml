@@ -2,5 +2,5 @@ ports:
  - port: 3000
    onOpen: open-preview
 tasks:
- - init: npm install && grunt build
+ - init: npm install && npx grunt build
    command: npm run examples
