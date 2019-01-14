@@ -42,7 +42,14 @@ RUN echo "\n# The next line enables bash completion for git cl." >> /home/gitpod
 # Disable gyp_chromium for faster updates.
 ENV GYP_CHROMIUM_NO_ACTION 1
 RUN echo "\n# Disable gyp_chromium for faster updates." >> /home/gitpod/.bashrc \
-&& echo "export GYP_CHROMIUM_NO_ACTION=1" >> /home/gitpod/.bashrc
+ && echo "export GYP_CHROMIUM_NO_ACTION=1" >> /home/gitpod/.bashrc
+
+# Pre-configure Chromium's source directory.
+RUN mkdir -p /workspace/chromium \
+ && cd /workspace/chromium \
+ && pyenv local system
+COPY .gclient /workspace/chromium
+RUN sudo chown gitpod:gitpod /workspace/chromium/.gclient
 
 # Give back control.
 USER root
