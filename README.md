@@ -8,3 +8,5 @@ The files are organized by repository name. If you need a different configuratio
 The configuration format is explained [here](https://docs.gitpod.io/40_Configuration.html#gitpod-file).
 
 PRs are very welcome! :heart:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://github.com/gitpod-io/definitely-gp)]
