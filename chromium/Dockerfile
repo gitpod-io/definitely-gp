@@ -45,7 +45,8 @@ RUN echo "\n# Disable gyp_chromium for faster updates." >> /home/gitpod/.bashrc 
  && echo "export GYP_CHROMIUM_NO_ACTION=1" >> /home/gitpod/.bashrc
 
 # Pre-configure Chromium's source directory.
-RUN mkdir -p /workspace/chromium \
+RUN sudo mkdir -p /workspace/chromium \
+ && sudo chown -R gitpod:gitpod /workspace \
  && cd /workspace/chromium \
  && pyenv local system
 COPY .gclient /workspace/chromium
