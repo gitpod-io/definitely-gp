@@ -3,8 +3,9 @@ ports:
 checkoutLocation: "src/github.com/demo-apps/go-gin-app"
 workspaceLocation: "."
 tasks:
-  - command: >
+  - init: >
       cd /workspace/src/github.com/demo-apps/go-gin-app &&
       go get -v ./... &&
-      go build -o app &&
+      go build -o app
+  - command: >
       ./app
