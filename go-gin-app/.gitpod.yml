@@ -7,5 +7,6 @@ tasks:
       cd /workspace/src/github.com/demo-apps/go-gin-app &&
       go get -v ./... &&
       go build -o app
-  - command: >
+    command: >
+      cd /workspace/src/github.com/demo-apps/go-gin-app &&
       ./app
