@@ -28,4 +28,3 @@ chown -R gitpod:gitpod /home/gitpod/ddlc.backup.zip
 # Clean up
 rm -rf /home/gitpod/ddlc/DDLC.app
 rm -rf /tmp/ddlc.zip
-
