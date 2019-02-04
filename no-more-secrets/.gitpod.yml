@@ -1,0 +1,4 @@
+tasks:
+- before: export PATH=$PATH:$(pwd)/bin
+  init: make nms sneakers
+  command: ls -l / | nms
