@@ -1,11 +1,13 @@
 image:
   file: Dockerfile
 checkoutLocation: chromium/src/
+ports:
+- port: 6080
 tasks:
-  - init: >
-      cd /workspace/chromium &&
-      pyenv local system &&
-      wget https://raw.githubusercontent.com/gitpod-io/definitely-gp/master/chromium/.gclient &&
-      cd src &&
-      gclient sync &&
-      gn gen out/Default --args="enable_nacl=false"
+- init: >
+    cd /workspace/chromium &&
+    pyenv local system &&
+    wget https://raw.githubusercontent.com/gitpod-io/definitely-gp/master/chromium/.gclient &&
+    cd src &&
+    gclient sync &&
+    gn gen out/Default --args="enable_nacl=false"
