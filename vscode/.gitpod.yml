@@ -3,4 +3,5 @@ image:
 ports:
   - port: 6080
 tasks:
-  - command: "yarn && ./scripts/code.sh"
+  - init: yarn
+    command: ./scripts/code.sh
