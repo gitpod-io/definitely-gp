@@ -3,7 +3,7 @@ ports:
 tasks:
 - init: >
     python3 -m pip install -r requirements.txt &&
-    python3 manage.py migrate &&
+    python3 manage.py migrate
   command: >
     echo "from locallibrary.settings import *" > locallibrary/local_settings.py &&
     echo "ALLOWED_HOSTS = ['*']" >> locallibrary/local_settings.py &&
