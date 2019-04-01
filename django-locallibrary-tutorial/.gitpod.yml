@@ -1,5 +1,6 @@
 ports:
 - port: 8080
+  onOpen: open-preview
 tasks:
 - init: >
     python3 -m pip install -r requirements.txt &&
