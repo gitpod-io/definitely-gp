@@ -1,5 +1,5 @@
 image:
-  file: Dockerfile
+  file: .gitpod.dockerfile
 ports:
   - port: 3000
 tasks:

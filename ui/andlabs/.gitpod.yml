@@ -1,7 +1,7 @@
 checkoutLocation: src/github.com/andlabs/ui
 workspaceLocation: /
 image:
-  file: Dockerfile
+  file: .gitpod.dockerfile
 ports:
   - port: 6080
 tasks:

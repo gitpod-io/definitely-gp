@@ -1,5 +1,5 @@
 image:
-  file: Dockerfile
+  file: .gitpod.dockerfile
 tasks:
   - command: "mvn package && mvn exec:java"
 ports:

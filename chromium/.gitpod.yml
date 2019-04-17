@@ -1,5 +1,5 @@
 image:
-  file: Dockerfile
+  file: .gitpod.dockerfile
 checkoutLocation: chromium/src/
 ports:
 - port: 6080
