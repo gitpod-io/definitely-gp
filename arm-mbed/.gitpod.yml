@@ -1,0 +1,5 @@
+image:
+  file: arm-mbed.dockerfile
+tasks:
+  - init: "/mbed-init.sh && toilet -f bigmono12 -F gay ARM-Mbed"
+  - command: "mbed compile -m K64F -t GCC_ARM"
