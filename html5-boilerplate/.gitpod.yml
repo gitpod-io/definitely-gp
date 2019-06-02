@@ -1,0 +1,7 @@
+image:
+  file: Dockerfile
+  context: .
+ports:
+- port: 80
+- port: 443
+- port: 6080
