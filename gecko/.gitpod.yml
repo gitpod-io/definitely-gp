@@ -1,0 +1,17 @@
+image:
+  file: .gitpod.dockerfile
+ports:
+  - port: 5900
+    onOpen: ignore
+  - port: 6080
+    onOpen: open-preview
+tasks:
+  - init: >
+      git config fetch.prune true &&
+      git remote add try hg::https://hg.mozilla.org/try &&
+      git config remote.try.skipDefaultUpdate true &&
+      git remote set-url --push try hg::ssh://hg.mozilla.org/try &&
+      git config remote.try.push +HEAD:refs/heads/branches/default/tip &&
+      git remote add inbound hg::ssh://hg.mozilla.org/integration/mozilla-inbound &&
+      git config remote.inbound.skipDefaultUpdate true &&
+      git config remote.inbound.push +HEAD:refs/heads/branches/default/tip
