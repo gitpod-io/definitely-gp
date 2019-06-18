@@ -9,4 +9,4 @@ The configuration format is explained [here](https://docs.gitpod.io/40_Configura
 
 PRs are very welcome! :heart:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://github.com/gitpod-io/definitely-gp)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/gitpod-io/definitely-gp)
