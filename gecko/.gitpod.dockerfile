@@ -15,7 +15,7 @@ RUN __RR_VERSION__="5.2.0" \
 RUN apt-get update \
  && apt-get install -y htop mercurial python-requests \
  && wget -qO /tmp/gecko.zip https://github.com/mozilla/gecko/archive/central.zip \
- && unzip /tmp/gecko.zip -d /tmp \
+ && unzip -q /tmp/gecko.zip -d /tmp \
  && cd /tmp/gecko-central \
  && python2.7 python/mozboot/bin/bootstrap.py --no-interactive --application-choice=browser \
  && rm -rf /tmp/gecko.zip /tmp/gecko-central /var/lib/apt/lists/*
