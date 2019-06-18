@@ -14,11 +14,10 @@ RUN __RR_VERSION__="5.2.0" \
 # https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Linux_Prerequisites#Most_Distros_-_One_Line_Bootstrap_Command
 RUN apt-get update \
  && apt-get install -y htop mercurial python-requests \
- && wget -qO /tmp/gecko.zip https://github.com/mozilla/gecko/archive/central.zip \
- && unzip -q /tmp/gecko.zip -d /tmp \
- && cd /tmp/gecko-central \
+ && git clone https://github.com/mozilla/gecko/ /tmp/gecko \
+ && cd /tmp/gecko \
  && python2.7 python/mozboot/bin/bootstrap.py --no-interactive --application-choice=browser \
- && rm -rf /tmp/gecko.zip /tmp/gecko-central /var/lib/apt/lists/*
+ && rm -rf /tmp/gecko /var/lib/apt/lists/*
 
 USER gitpod
 
