@@ -54,3 +54,7 @@ RUN apt-get update \
 # Source: https://github.com/servo/servo/issues/7512#issuecomment-216665988
 RUN sed -i "s/\(Xvfb .*\)&\s*$/\1+extension RANDR +extension RENDER +extension GLX \&/" /usr/bin/start-vnc-session.sh
 # FIXME: Maybe also add "-pn" ?
+
+# Compile with Clang 9.
+ENV CC="clang-9"
+ENV CXX="clang++-9"
