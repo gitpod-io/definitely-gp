@@ -5,7 +5,7 @@ USER root
 # Install Chromium build dependencies
 RUN apt update \
  && curl -L https://chromium.googlesource.com/chromium/src/+/master/build/install-build-deps.sh?format=TEXT | base64 --decode > /tmp/install-build-deps.sh \
- && sed -ri 's/\(trusty\|xenial\|artful\|bionic\)/(trusty|xenial|artful|bionic|cosmic)/' /tmp/install-build-deps.sh \
+ && sed -ri 's/\(trusty\|xenial\|bionic\|disco\)/(trusty|xenial|bionic|cosmic|disco)/' /tmp/install-build-deps.sh \
  && chmod +x /tmp/install-build-deps.sh \
  && echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections \
  && /tmp/install-build-deps.sh --no-prompt --no-arm --no-chromeos-fonts --no-nacl \
