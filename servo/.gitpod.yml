@@ -7,4 +7,4 @@ ports:
     onOpen: open-preview
 tasks:
   - init: pip install requests && ./mach build -r
-    command: ./mach run -r # -z https://www.wikipedia.org -x -o test.png && gp open test.png
+    command: ./mach run -r -Z disable-vsync
