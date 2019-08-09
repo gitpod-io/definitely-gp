@@ -1,7 +1,7 @@
 ports:
-- port: 8080
-  onOpen: ignore
+  - port: 8080
+    onOpen: ignore
 tasks:
-- command: gp await-port 8080 && gp preview $(gp url 8080)examples/#webgl_animation_cloth
-- init: npm install
-  command: npm start
+  - command: gp await-port 8080 && gp preview $(gp url 8080)/examples/#webgl_animation_cloth
+  - init: npm install
+    command: npm start
