@@ -1,5 +1,4 @@
-image:
-  file: .gitpod.dockerfile
+image: gitpod/workspace-firefox
 ports:
   - port: 5900
     onOpen: ignore
