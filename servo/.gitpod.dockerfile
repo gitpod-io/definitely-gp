@@ -28,7 +28,7 @@ RUN apt-get update \
   cmake \
   virtualenv \
   python-pip \
-  libssl1.0-dev \
+  libssl-dev \
   libbz2-dev \
   liblzma-dev \
   libosmesa6-dev \
