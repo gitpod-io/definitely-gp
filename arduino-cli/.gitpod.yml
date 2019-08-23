@@ -1,4 +1,3 @@
 tasks:
-- command: go get -v
+- command: cd arduino-cli && go get -v
 checkoutLocation: arduino-cli
-workspaceLocation: ardiuno-cli
