@@ -55,6 +55,6 @@ RUN apt-get update \
 RUN sed -i "s/\(Xvfb .*\)&\s*$/\1+extension RANDR +extension RENDER +extension GLX \&/" /usr/bin/start-vnc-session.sh
 # FIXME: Maybe also add "-pn" ?
 
-# Compile with Clang 9.
-ENV CC="clang-9"
-ENV CXX="clang++-9"
+# Compile with Clang 10.
+ENV CC="clang-10"
+ENV CXX="clang++-10"
