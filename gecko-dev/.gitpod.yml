@@ -1,4 +1,4 @@
-image: gitpod/workspace-firefox
+image: gitpod/workspace-gecko
 ports:
   - port: 5900
     onOpen: ignore
