@@ -1,0 +1,9 @@
+ports:
+  - port: 4000
+
+tasks:
+  - command: >
+        gem install jekyll &&
+        jekyll new myapp &&
+        cd myapp &&
+        bundle exec jekyll serve -H 0.0.0.0
