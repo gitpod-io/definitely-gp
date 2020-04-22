@@ -6,7 +6,7 @@ ports:
   - port: 6080
     onOpen: ignore
 tasks:
-  - init: pip install -e .
+  - init: pip3 install -e .
     command: >
-      python /workspace/gym/examples/agents/cem.py &&
+      python3 /workspace/gym/examples/agents/cem.py &&
       python3 -m http.server 3000 -d /tmp/cem-agent-results
