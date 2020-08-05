@@ -4,6 +4,6 @@ solutions = [
     "managed": False,
     "name": "src",
     "custom_deps": { "src/third_party/chromite": None },
-    "custom_vars": {},
+    "custom_vars": { "checkout_configuration": "small" },
   },
 ]
