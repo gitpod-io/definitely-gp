@@ -2,7 +2,7 @@ image:
   file: arm-mbed.dockerfile
 tasks:
   - command: >
-      bash /opt/arm-mbed-init.sh && 
-      toilet -f bigmono12 -F gay ARM-Mbed && 
+      bash /opt/arm-mbed-init.sh &&
+      toilet -f bigmono12 -F gay ARM-Mbed &&
       mbed compile -m K64F -t GCC_ARM
 
