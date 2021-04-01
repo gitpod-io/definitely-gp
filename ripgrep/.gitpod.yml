@@ -6,3 +6,8 @@ tasks:
 - command: cargo watch -x check
   openIn: bottom
   openMode: split-right
+vscode:
+  extensions:
+    - bungcip.better-toml
+    - vadimcn.vscode-lldb
+    - rust-lang.rust
