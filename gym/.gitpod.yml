@@ -10,3 +10,6 @@ tasks:
     command: >
       python3 /workspace/gym/examples/agents/cem.py &&
       python3 -m http.server 3000 -d /tmp/cem-agent-results
+vscode:
+  extensions:
+    - ms-python.python
