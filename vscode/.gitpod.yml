@@ -3,5 +3,5 @@ image:
 ports:
   - port: 6080
 tasks:
-  - init: yarn
+  - init: nvm install v10.19.0 --reinstall-packages-from=node && yarn
     command: ./scripts/code.sh
