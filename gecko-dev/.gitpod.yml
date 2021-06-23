@@ -1,6 +1,17 @@
 image: gitpod/workspace-gecko
+
 ports:
   - port: 5900
     onOpen: ignore
   - port: 6080
     onOpen: open-preview
+
+tasks:
+  - init: ./mach build && ./mach build-backend -b CompileDB
+    command: ./mach run
+
+vscode:
+  extensions:
+    - dbaeumer.vscode-eslint
+    - esbenp.prettier-vscode
+    - webfreak.debug
