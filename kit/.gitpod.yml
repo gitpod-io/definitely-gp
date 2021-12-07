@@ -1,0 +1,43 @@
+# Learn more about this Gitpod configuration file in the documentation at https://www.gitpod.io/docs/configuration
+image:
+  file: .gitpod.Dockerfile
+
+ports:
+  - port: 3000
+    onOpen: ignore
+  - port: 4000
+    onOpen: ignore
+  - port: 5900
+    onOpen: ignore
+  - port: 6080
+    onOpen: ignore
+  - port: 24678
+    onOpen: ignore
+
+tasks:
+  - before: |
+      npm i -g pnpm
+    init: |
+      pnpm i
+      pnpm build
+      pnpm test
+    command: |
+      git config core.hookspath .githooks
+github:
+  prebuilds:
+    # enable for the master/default branch (defaults to true)
+    master: true
+    # enable for all branches in this repo (defaults to false)
+    branches: true
+    # enable for pull requests coming from this repo (defaults to true)
+    pullRequests: true
+    # enable for pull requests coming from forks (defaults to false)
+    pullRequestsFromForks: false
+    # add a check to pull requests (defaults to true)
+    addCheck: true
+    # add a "Review in Gitpod" button as a comment to pull requests (defaults to false)
+    addComment: false
+    # add a "Review in Gitpod" button to the pull request's description (defaults to false)
+    addBadge: true
+    # add a label once the prebuild is ready to pull requests (defaults to false)
+    addLabel: false
