@@ -15,14 +15,18 @@ ports:
     onOpen: ignore
 
 tasks:
-  - before: |
-      npm i -g pnpm
-    init: |
+  - init: |
       pnpm i
       pnpm build
       pnpm test
     command: |
       git config core.hookspath .githooks
+      cd packages/kit
+      pnpm dev
+  - command: |
+      cd examples/hn.svelte.dev
+      pnpm dev
+
 github:
   prebuilds:
     # enable for the master/default branch (defaults to true)

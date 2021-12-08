@@ -16,3 +16,5 @@ RUN sudo apt-get update \
     libgtk-3-0 \
     libxshmfence1 \
   && sudo rm -rf /var/lib/apt/lists/*
+
+RUN npm i -g pnpm
