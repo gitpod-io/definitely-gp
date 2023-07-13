@@ -1,3 +1,5 @@
+# DEPRECATED - Gitpod no longer supports external configuration
+
 # External Gitpod Configuration
 
 [Gitpod](https://gitpod.io) is an online IDE for GitHub.
