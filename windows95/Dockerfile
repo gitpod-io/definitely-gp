@@ -12,3 +12,7 @@ RUN cd /tmp \
  && dpkg-deb -R windows95.deb windows95 \
  && cp windows95/usr/lib/windows95/resources/app.asar.unpacked/src/images/windows95.img /home/gitpod \
  && rm -rf /tmp/windows95.deb /tmp/windows95
+
+RUN cd node_modules/electron/dist \
+ && sudo chown root:root chrome-sandbox \
+ && sudo chmod 4755 chrome-sandbox
